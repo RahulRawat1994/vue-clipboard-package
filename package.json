@@ -1,7 +1,29 @@
 {
-  "name": "vue-copy-to-clipboard",
-  "version": "0.0.1",
+  "name": "vue-clipboard-package",
+  "version": "0.0.2",
   "type": "module",
+  "keywords": [
+    "vue",
+    "clipboard",
+    "copy",
+    "vue-directive",
+    "copy-to-clipboard",
+    "web-clipboard",
+    "clipboard-utility",
+    "vue-clipboard",
+    "copy-paste",
+    "vue-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RahulRawat1994/vue-clipboard-package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RahulRawat1994/vue-clipboard-package/issues"
+  },
+  "homepage": "https://github.com/RahulRawat1994/vue-clipboard-package#readme",
+  "author": "Rahul Rawat <rr904196@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -26,5 +48,17 @@
     "vite": "^5.4.8",
     "vue": "^3.5.13",
     "vue-tsc": "^2.1.10"
-  }
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
 }
