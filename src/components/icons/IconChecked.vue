@@ -1,5 +1,5 @@
 <template>
-  <svg part="checked-icon svg" class="checkbox__icon" viewBox="0 0 16 16">
+  <svg part="checked-icon svg" class="checkbox__icon" width="16" height="16" viewBox="0 0 16 16">
     <g
       stroke="none"
       stroke-width="1"

@@ -1,6 +1,6 @@
 {
   "name": "vue-clipboard-package",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "keywords": [
     "vue",
@@ -24,6 +24,8 @@
   "homepage": "https://github.com/RahulRawat1994/vue-clipboard-package#readme",
   "author": "Rahul Rawat <rr904196@gmail.com>",
   "license": "MIT",
+  "main": "src/index.js",
+  "module": "src/index.js",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -58,7 +60,7 @@
     "npm": ">=8.0.0"
   },
   "files": [
-    "dist",
-    "src"
+    "dist/*",
+    "src/*"
   ]
 }

@@ -16,8 +16,11 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["vite/client"]
+    "types": ["vite/client", "vue"]
   },
-  "include": ["src/**/*"],
+  "include": [
+    "src/**/*",           // Include all source files
+    "src/**/*.vue"        // Include Vue files
+  ],
   "exclude": ["node_modules", "dist"]
 }
