@@ -1,8 +1,8 @@
 <template>
   <span
-    v-tooltip="{ location: tooltipPlacement, text: tooltipContent, disabled }"
     class="clipboard"
-    :class="{ 'clipboard-disabled': disabled }"
+    :data-tooltip="tooltipPlacement"
+    :class="{ 'clipboard-disabled ': disabled,  }"
   >
     <slot v-if="copied" name="success-icon">
       <IconChecked />
@@ -18,6 +18,7 @@
         <IconCopy />
       </span>
     </slot>
+    <div class="tooltip" >{{ tooltipContent }}</div>
   </span>
 </template>
 
@@ -83,5 +84,64 @@ const tooltipContent = computed(() => {
 .clipboard-disabled {
   cursor: not-allowed;
   opacity: 0.6;
+}
+
+.clipboard {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 20px; /* Adds space for each container */
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap; /* Ensures text stays in one line */
+}
+
+/* Show tooltip on hover */
+.clipboard:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Tooltip positions */
+.clipboard[data-tooltip="top"] .tooltip {
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.clipboard[data-tooltip="bottom"] .tooltip {
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.clipboard[data-tooltip="left"] .tooltip {
+  top: 50%;
+  right: 120%;
+  transform: translateY(-50%);
+}
+
+.clipboard[data-tooltip="right"] .tooltip {
+  top: 50%;
+  left: 120%;
+  transform: translateY(-50%);
+}
+
+/* Disable tooltip */
+.clipboard-disabled .tooltip {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none;
+  cursor: default;
 }
 </style>
