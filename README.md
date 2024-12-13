@@ -7,6 +7,10 @@ A powerful Vue 3 package providing a directive, composable, and component for co
 * **Composable:** Programmatic access to clipboard operations via a composable function.
 * **Component:** A complete, customizable button component with feedback for successful or failed clipboard actions.
 
+## Demo
+[![Watch the video](https://img.youtube.com/vi/B14L4zozPpU/maxresdefault.jpg)](https://youtu.be/B14L4zozPpU)
+
+
 ## Installation
 Install the package via npm or yarn:
 
